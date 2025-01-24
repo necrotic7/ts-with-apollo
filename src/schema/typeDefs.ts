@@ -7,10 +7,15 @@ const schema: DocumentNode = gql`
     }
 
     type Book {
-        id: ID
-        name: String
-        author: String
-        publish: String
+        id: ID!
+        name: String!
+        author: Author!
+        publish: String!
+    }
+
+    type Author {
+        id: ID!
+        name: String!
     }
 `;
 
