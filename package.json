@@ -2,9 +2,9 @@
   "name": "wei-apollo",
   "version": "1.0.0",
   "description": "npm init npm install apollo-server graphql npm install typescript ts-node --save-dev npx tsc --init npx ts-node src/server.ts",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
