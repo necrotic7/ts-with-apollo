@@ -3,6 +3,9 @@ const resolvers = {
     Query:{
         books: () => {
             return Books;
+        },
+        getBook: (parent:void, args: {id: number}) => {
+            return Books.find(book => book.id == args.id);
         }
     },
 

@@ -7,7 +7,8 @@ const schema: DocumentNode = gql`
     }
 
     type Query {
-        books: [Book]
+        books: [Book],
+        getBook(id: ID!): Book,
     }
 
     type Book {
