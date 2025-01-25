@@ -49,6 +49,22 @@ const authors = [
       publish: "Yun's Publish",
     },
   ];
+
+const animals = [
+    {
+      name: "狼蛛",
+      footLength: 123,
+      type: "Spider",
+    },
+    {
+      name: "奇異鳥",
+      footLength: 123,
+      wingLength: 456,
+      wing: false,
+      type: "Bird",
+    },
+];
   
 export const Authors = authors;
 export const Books = books;
+export const Animals = animals;

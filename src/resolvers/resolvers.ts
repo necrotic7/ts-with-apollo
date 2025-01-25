@@ -1,4 +1,4 @@
-import {Authors, Books} from "../data/temp"
+import {Authors, Books, Animals} from "../data/temp"
 const resolvers = {
     Query:{
         books: () => {
@@ -8,8 +8,10 @@ const resolvers = {
             return Books.find(book => book.id == args.id);
         },
         getHeader: (parent:void, args:void, context:void) => {
-            console.log(context);
             return JSON.stringify(context, null, 2);
+        },
+        animals: () => {
+            return Animals
         }
     },
 
@@ -17,6 +19,12 @@ const resolvers = {
         author: (parent:{ author: number }) => {
             // parent相當於取得author的上層，也就是Books裡的 { id, name, author, publish }
             return Authors.find(author => author.id == parent.author)
+        }
+    },
+
+    Animal:{
+        __resolveType: (obj: { type: string }) => {
+            return obj.type
         }
     }
 };

@@ -10,6 +10,7 @@ const schema: DocumentNode = gql`
         books: [Book],
         getBook(id: ID!): Book,
         getHeader: String,
+        animals: [Animal],
     }
 
     type Book {
@@ -22,6 +23,23 @@ const schema: DocumentNode = gql`
     type Author {
         id: ID!
         name: String!
+    }
+
+    interface Animal {
+        name: String!
+        footLength: Int!
+    }
+
+    type Spider implements Animal{
+        name: String!
+        footLength: Int!
+    }
+
+    type Bird implements Animal{
+        name: String!
+        footLength: Int!
+        wingLength: Int!
+        wing: Boolean!
     }
 `;
 
