@@ -64,7 +64,22 @@ const animals = [
       type: "Bird",
     },
 ];
+
+const deserts = [
+    {
+        name: "layer_cake",
+        price: 100,
+        type: "Cake",
+    },
+    {
+        name: "ice_cream",
+        price: 60,
+        flavor: "soda",
+        type: "Ice",
+    }
+];
   
 export const Authors = authors;
 export const Books = books;
 export const Animals = animals;
+export const Deserts = deserts;

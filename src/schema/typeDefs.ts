@@ -11,6 +11,7 @@ const schema: DocumentNode = gql`
         getBook(id: ID!): Book,
         getHeader: String,
         animals: [Animal],
+        deserts: [Desert],
     }
 
     type Book {
@@ -40,6 +41,19 @@ const schema: DocumentNode = gql`
         footLength: Int!
         wingLength: Int!
         wing: Boolean!
+    }
+
+    union Desert = Cake | Ice
+
+    type Cake {
+        name: String!
+        price: Int!
+    }
+
+    type Ice {
+        name: String!
+        price: Int!
+        flavor: String!
     }
 `;
 
