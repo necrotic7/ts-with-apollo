@@ -7,7 +7,8 @@ import resolvers from "./resolvers/resolvers";
 
 const server: ApolloServer = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({req}) => req.headers,
 });
 
 server.listen().then(({url})=>{

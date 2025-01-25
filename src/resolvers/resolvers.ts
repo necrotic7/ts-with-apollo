@@ -6,6 +6,10 @@ const resolvers = {
         },
         getBook: (parent:void, args: {id: number}) => {
             return Books.find(book => book.id == args.id);
+        },
+        getHeader: (parent:void, args:void, context:void) => {
+            console.log(context);
+            return JSON.stringify(context, null, 2);
         }
     },
 

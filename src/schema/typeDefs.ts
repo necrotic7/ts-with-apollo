@@ -9,6 +9,7 @@ const schema: DocumentNode = gql`
     type Query {
         books: [Book],
         getBook(id: ID!): Book,
+        getHeader: String,
     }
 
     type Book {
